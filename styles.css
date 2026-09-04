@@ -42,7 +42,7 @@ body {
 nav { display: flex; gap: 38px; }
 nav a { color: #444444; font-size: 14px; text-decoration: none; }
 nav a:hover { color: var(--orange-deep); }
-.cv-button {
+.header-action {
   padding: 11px 20px;
   border-radius: 24px;
   background: #111111;
@@ -51,7 +51,7 @@ nav a:hover { color: var(--orange-deep); }
   font-weight: 700;
   text-decoration: none;
 }
-.cv-button span { margin-left: 10px; color: var(--orange); }
+.header-action span { margin-left: 10px; color: var(--orange); }
 
 .hero,
 .quick-facts,
@@ -346,8 +346,8 @@ footer a { color: #555555; text-decoration: none; }
   .site-header { height: 64px; padding: 0 20px; }
   .brand { font-size: 24px; }
   .site-header nav { display: none; }
-  .cv-button { padding: 9px 13px; font-size: 11px; }
-  .cv-button span { margin-left: 5px; }
+  .header-action { padding: 9px 13px; font-size: 11px; }
+  .header-action span { margin-left: 5px; }
   .hero,
   .quick-facts,
   .section,
