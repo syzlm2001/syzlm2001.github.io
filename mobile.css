@@ -1,0 +1,8 @@
+@media (max-width: 760px) {
+  body { overflow-x: hidden; }
+  main, .site-header, .site-footer { width: 100%; max-width: 100%; }
+  .nav { align-items: flex-start; gap: 14px; }
+  .nav-links { display: none; }
+  .hero h1 { max-width: 100%; font-size: 38px; word-break: break-all; overflow-wrap: anywhere; }
+  .lede { max-width: 100%; overflow-wrap: anywhere; }
+}
