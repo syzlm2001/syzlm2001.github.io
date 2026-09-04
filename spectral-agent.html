@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="陈琳锋独立完成的 AOW-CSL 食品光谱持续学习与决策 Agent 系统。">
+  <title>AOW-CSL 食品光谱持续学习与决策 Agent｜陈琳锋</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css?v=20260904d">
+  <link rel="stylesheet" href="project-detail.css?v=20260904d">
+</head>
+<body class="case-page spectral-case">
+  <header class="site-header case-header">
+    <a class="brand" href="index.html">Chen<span>.</span></a>
+    <a class="back-link" href="index.html#projects">← 返回作品集</a>
+    <a class="header-action" href="https://github.com/syzlm2001/AOW-CSL-Food-Spectral-Agent" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+  </header>
+
+  <main class="case-main">
+    <section class="case-hero">
+      <div>
+        <span class="case-index">01 / FLAGSHIP PROJECT</span>
+        <h1>AOW-CSL 食品光谱<br><em>持续学习与决策 Agent</em></h1>
+        <p class="case-subtitle">独立完成掺假梯度设计、样品制备、NIR 光谱采集、数据质控、持续学习算法、Agent 编排、工程实现与实验验收。系统支持未知风险触发、新类别注册、类别与比例联合预测，以及可回放的风险决策。</p>
+        <div class="case-meta"><span>个人独立项目</span><span>项目负责人</span><span>2026.03–2026.06</span><span>Spectral ML / Agent / Continual Learning</span></div>
+      </div>
+      <aside class="case-thesis"><p>让固定类别的光谱模型在发现训练外掺假物后，经过人工确认持续接入新类别，并保持每次决策可恢复、可复核。</p></aside>
+    </section>
+
+    <section class="case-metrics" aria-label="项目关键指标">
+      <div><b>95.88%</b><span>RF/SNV Accuracy</span></div>
+      <div><b>0.8751</b><span>基础模型 Macro-F1</span></div>
+      <div><b>0.3314 → 0.2211</b><span>注册后比例 MAE</span></div>
+      <div><b>0.3896 → 0.6420</b><span>新类别 Macro-F1</span></div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-head"><span>01</span><h2>从光谱输入到持续注册</h2></div>
+      <div class="case-flow">
+        <div><small>STEP 01</small><strong>光谱质控</strong><p>完成吸光度转换、重复扫描聚合与物理样本分组。</p></div>
+        <div><small>STEP 02</small><strong>未知风险触发</strong><p>识别训练外样本和模型高误接受风险。</p></div>
+        <div><small>STEP 03</small><strong>人工确认</strong><p>请求高价值标签并更新当前可见标签池。</p></div>
+        <div><small>STEP 04</small><strong>专家注册</strong><p>按标签预算训练新类别专家并通过质量门控。</p></div>
+        <div><small>STEP 05</small><strong>决策输出</strong><p>统一路由类别、比例、冲突证据与风险动作。</p></div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-head"><span>02</span><h2>持续学习算法与 Agent 分工</h2></div>
+      <div class="case-grid">
+        <article class="case-block"><span class="block-label">MODELING AGENTS</span><h3>训练、策略和验收职责分离</h3><p>以 ModelingPipeline 编排 DataAudit、Training、Strategy 和 Acceptance 四类 Agent，完成元数据审计、候选训练、OOF 评估、策略选择和独立验收。策略推理异常时按确定性 OOF 规则回退。</p></article>
+        <article class="case-block"><span class="block-label">SHARED ARBITRATOR</span><h3>共享多类别仲裁器处理专家冲突</h3><p>在基础模型与多个新类别专家之间建立统一仲裁，综合专家置信度、未知状态和分类结果，处理新类别之间以及新旧类别之间的竞争。</p></article>
+        <article class="case-block"><span class="block-label">SEQUENTIAL REGISTRATION</span><h3>新类别按实际到达顺序接入</h3><p>仅使用当前已确认标签，在 R3、R6、R12、R24 嵌套预算下更新专家。两个类别以两种顺序到达时均完成连续注册，训练状态与标签可见时间完整记录。</p></article>
+        <article class="case-block"><span class="block-label">JOINT ROUTING</span><h3>类别与比例联合学习进入统一路由</h3><p>组合共享仲裁、专家注册表、类别预测头和比例预测头，为每个样本输出类别、掺假比例、置信度、路由来源、候选专家和冲突证据。</p></article>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-head"><span>03</span><h2>从基础建模到持续学习增益</h2></div>
+      <div class="case-grid">
+        <article class="case-block"><span class="block-label">BASE MODEL</span><h3>物理样本级验证控制数据泄漏</h3><p>基础建模覆盖 <strong>972 条光谱、324 个物理样本和 1,948 维特征</strong>，按物理样本分组完成候选模型比较与跨批次评价。RF/SNV 达到 95.88% Accuracy 和 0.8751 Macro-F1。</p></article>
+        <article class="case-block"><span class="block-label">EXPERIMENT DESIGN</span><h3>多序列、多种子和嵌套标签预算</h3><p>扩展数据包含 1,149 条光谱和 383 个物理样本。围绕类别到达顺序、随机种子、标签预算、强基线和消融因素，完成 <strong>240 个核心实验单元与 432 个消融实验单元</strong>。</p></article>
+      </div>
+      <div class="result-band" aria-label="持续学习结果">
+        <div class="result-row"><span>注册后端到端比例 MAE</span><b>0.3314 → 0.2211</b><em>较传统基础模型降低 33.3%</em></div>
+        <div class="result-row"><span>新类别 Macro-F1</span><b>0.3896 → 0.6420</b><em>提升 25.2 个百分点</em></div>
+        <div class="result-row"><span>有效预测覆盖率</span><b>0.3849 → 0.6245</b><em>提升 24.0 个百分点</em></div>
+        <div class="result-row"><span>原有类别</span><b>性能基本保持</b><em>新类别注册未破坏原有能力</em></div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-head"><span>04</span><h2>可恢复、可审计的产品闭环</h2></div>
+      <div class="case-grid">
+        <article class="case-block"><span class="block-label">LIFECYCLE</span><h3>标签请求驱动专家更新</h3><p>两条类别到达序列均完成两个新类别的 R24 注册，每条生命周期记录 48 次 request-confirm 和 8 个模型检查点。标签状态、专家版本和路由结果都可追踪。</p></article>
+        <article class="case-block"><span class="block-label">PERSISTENCE</span><h3>模型 Bundle 支持进程重启恢复</h3><p>保存基础模型、专家注册表、共享仲裁器、比例模型和可见标签状态。Bundle 重载前后固定参考样本预测一致，CLI 提供 prepare、deterministic、live、replay 和 report 入口。</p></article>
+        <article class="case-block"><span class="block-label">DECISION SUPERVISOR</span><h3>LLM + RAG 解释模型证据</h3><p>将模型输出、适用域状态、专家冲突和检索规则组成结构化上下文，完成 <strong>24 个真实决策案例</strong>。决策动作覆盖 accept、review、abstain 和 request_label。</p></article>
+        <article class="case-block"><span class="block-label">REPLAY</span><h3>逐事件日志复现完整决策链</h3><p>使用 JSONL 记录输入证据、标签可见时间、专家版本、模型路由、知识规则和最终动作。在线结果可离线 Replay，便于定位错误类型和复核实验过程。</p></article>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-head"><span>05</span><h2>我的职责</h2></div>
+      <div class="case-contribution">
+        <p class="contribution-lead">从湿实验到算法、Agent 和工程交付，完整负责项目的设计、实现与验收。</p>
+        <ul class="contribution-list">
+          <li><b>01</b>设计掺假梯度并完成样品制备、NIR 光谱采集、重复扫描聚合和数据质控。</li>
+          <li><b>02</b>建立物理样本分组验证、候选模型比较、多序列与多随机种子实验方案。</li>
+          <li><b>03</b>实现共享多类别仲裁器、顺序专家注册、动态路由和类别/比例联合学习。</li>
+          <li><b>04</b>编排未知风险、标签请求、人工确认、增量训练、质量门控和决策报告。</li>
+          <li><b>05</b>完成模型持久化、CLI 生命周期、JSONL 日志、离线 Replay 与结果验收。</li>
+        </ul>
+      </div>
+      <p class="tech-line"><strong>技术栈</strong>Python · NumPy · Pandas · scikit-learn · LLM · RAG · LangChain · 持续学习 · 多模型路由 · 模型持久化 · JSONL · unittest</p>
+    </section>
+  </main>
+
+  <footer class="case-footer"><span>© 2026 陈琳锋</span><span>食品光谱 × 持续学习 × Agent</span><a href="index.html#projects">返回精选项目 ↑</a></footer>
+</body>
+</html>

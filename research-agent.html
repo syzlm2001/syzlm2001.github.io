@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="陈琳锋主导的食品真实性领域大模型科研智能体：Hybrid RAG、知识图谱、Agent 编排与证据回链。">
+  <title>食品真实性领域大模型科研智能体｜陈琳锋</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css?v=20260904d">
+  <link rel="stylesheet" href="project-detail.css?v=20260904d">
+</head>
+<body class="case-page research-case">
+  <header class="site-header case-header">
+    <a class="brand" href="index.html">Chen<span>.</span></a>
+    <a class="back-link" href="index.html#projects">← 返回作品集</a>
+    <a class="header-action" href="https://github.com/syzlm2001/food-authenticity-research-agent" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+  </header>
+
+  <main class="case-main">
+    <section class="case-hero">
+      <div>
+        <span class="case-index">02 / FLAGSHIP PROJECT</span>
+        <h1>食品真实性领域<br><em>大模型科研智能体</em></h1>
+        <p class="case-subtitle">从 0 到 1 负责需求拆解、系统架构、Agent 工作流、实验评测与交付。系统把文献证据、实体关系、研究上下文和科研分析接入同一条工作流，让研究回答可以定位原文，也能继续进入比较、建模与方案设计。</p>
+        <div class="case-meta"><span>个人项目负责人</span><span>2026.07–2026.08</span><span>LLM / Agent / Hybrid RAG</span><span>食品科学 × AI</span></div>
+      </div>
+      <aside class="case-thesis"><p>把 600 个文献来源组织成可检索、可推理、可回链的研究证据系统，并用 2,160 次回答验证应用效果。</p></aside>
+    </section>
+
+    <section class="case-metrics" aria-label="项目关键指标">
+      <div><b>46,123</b><span>组 Claim / EvidenceSpan</span></div>
+      <div><b>2,400</b><span>条证据路径验证</span></div>
+      <div><b>67.08% → 85.00%</b><span>事实通过率</span></div>
+      <div><b>2,160</b><span>次正式回答</span></div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-head"><span>01</span><h2>一条可追溯的科研回答链路</h2></div>
+      <div class="case-flow">
+        <div><small>STEP 01</small><strong>项目上下文</strong><p>读取研究目标、会话摘要、历史任务与相关记忆。</p></div>
+        <div><small>STEP 02</small><strong>BGE-M3 检索</strong><p>将问题编码为 1,024 维向量，召回 Claim 与 EvidenceSpan。</p></div>
+        <div><small>STEP 03</small><strong>图谱扩展</strong><p>连接食品、检测方法、掺假物和化学指标，生成三跳路径。</p></div>
+        <div><small>STEP 04</small><strong>Agent 推理</strong><p>完成证据整理、跨文献比较、研究方案与答案审阅。</p></div>
+        <div><small>STEP 05</small><strong>Citation 回链</strong><p>将结论定位至 EvidenceSpan 与原始文献内容。</p></div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-head"><span>02</span><h2>从检索命中到研究判断</h2></div>
+      <div class="case-grid">
+        <article class="case-block"><span class="block-label">HYBRID RAG</span><h3>向量检索负责召回，知识图谱补足关系</h3><p>使用 <strong>BGE-M3</strong> 生成 1,024 维向量，以 NumPy 完成本地相似度检索。命中文献进入 SQLite 图谱后，继续扩展食品、方法、掺假物和指标关系，形成最多三跳的结构化证据路径。</p></article>
+        <article class="case-block"><span class="block-label">EVIDENCE DESIGN</span><h3>结论、推论和建议分层组织</h3><p>将文献事实、跨证据推论、模型背景知识和研究建议分开表达。涉及具体研究结论时绑定 EvidenceSpan Citation，研究者可直接回到支撑片段核验上下文。</p></article>
+        <article class="case-block"><span class="block-label">AGENT ORCHESTRATION</span><h3>按任务复杂度切换 Single / Multi Agent</h3><p>Single 模式处理快速研究问答；Multi 模式拆分证据整理、图谱分析、跨文献综合、研究方案、审阅与修订。两种模式共用模型、知识库和检索工具，便于对照评测。</p></article>
+        <article class="case-block"><span class="block-label">PROJECT MEMORY</span><h3>把一次问答接回持续研究过程</h3><p>项目记忆保存研究目标、会话摘要、相关任务和历史分析，与文献知识库分开管理。每次回答前构建项目上下文，回答后更新研究进展，支持连续追问和方案迭代。</p></article>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-head"><span>03</span><h2>用受控实验检验科研辅助价值</h2></div>
+      <div class="case-grid">
+        <article class="case-block"><span class="block-label">EVALUATION SET</span><h3>80 道中文领域问题，覆盖六类研究任务</h3><p>题目覆盖单篇事实、方法指标、跨文献比较、证据冲突、研究方案和不可回答判断。围绕同一题集设计 <strong>9 组基线与消融实验</strong>，每组重复运行 3 次。</p></article>
+        <article class="case-block"><span class="block-label">STATISTICAL REVIEW</span><h3>把回答质量拆成可比较指标</h3><p>使用事实正确性、推理深度、研究启发性、Citation 支持率与 RAGAS 评价回答，结合问题级配对统计、Bootstrap 置信区间、Wilcoxon 检验和 Holm 校正分析差异。</p></article>
+      </div>
+      <div class="result-band" aria-label="评测结果">
+        <div class="result-row"><span>事实通过率</span><b>67.08% → 85.00%</b><em>LLM-only → Single-Hybrid</em></div>
+        <div class="result-row"><span>事实正确性 / 推理深度</span><b>+0.350 / +0.344</b><em>同题对照提升</em></div>
+        <div class="result-row"><span>研究启发性</span><b>+0.461</b><em>达到统计显著水平</em></div>
+        <div class="result-row"><span>证据路径 / Citation</span><b>100% / 100%</b><em>2,400 条路径验证</em></div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-head"><span>04</span><h2>科研工作台与工程交付</h2></div>
+      <div class="case-grid">
+        <article class="case-block"><span class="block-label">CONTROLLED ANALYSIS</span><h3>从数据上传走到统计建模</h3><p>受控 Python 工作流支持数据识别、分析计划、统计检验、机器学习建模和结果归档。在 <strong>178 个样本、13 项化学特征</strong>的葡萄品种案例中，逻辑回归 balanced accuracy 达到 <strong>0.9838 ± 0.0153</strong>，XGBoost 达到 0.9632 ± 0.0313。</p></article>
+        <article class="case-block"><span class="block-label">RESEARCH FIGURES</span><h3>分析结果直接进入图件流程</h3><p>建立 source-data、draft、nature、QA 四阶段图件流程，输出 SVG、PDF、TIFF 和 PNG，并生成双语图注。图件保留数据来源与分析任务记录，便于论文材料复核。</p></article>
+        <article class="case-block"><span class="block-label">DELIVERY</span><h3>本地化部署与多端验收</h3><p>后端采用 FastAPI 与 SQLite，前端使用 Vue 3、TypeScript 和 Cytoscape。完成 <strong>318 项测试</strong>、Docker 部署，以及桌面端和移动端验收。</p></article>
+        <article class="case-block"><span class="block-label">DATA ASSET</span><h3>统一管理文献、证据和实体关系</h3><p>600 个来源身份去重为 593 个唯一内容，Claim、EvidenceSpan、向量和图谱边使用统一标识关联。问答、分析任务与项目记忆分别落库，便于检索和复盘。</p></article>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-head"><span>05</span><h2>我的职责</h2></div>
+      <div class="case-contribution">
+        <p class="contribution-lead">我负责把食品真实性研究流程翻译成系统能力，并用受控评测决定方案是否有效。</p>
+        <ul class="contribution-list">
+          <li><b>01</b>梳理研究场景，定义问题类型、数据对象、模块边界和交付标准。</li>
+          <li><b>02</b>确定 Hybrid RAG、知识图谱、EvidenceSpan Citation 与 Agent 编排方案。</li>
+          <li><b>03</b>设计 80 道领域问题、9 组实验、评价指标和统计判定方法。</li>
+          <li><b>04</b>审阅关键实现，定位检索、引用和实验问题，组织测试与结果分析。</li>
+          <li><b>05</b>完成项目记忆、科研分析、图件生成、本地部署和演示验收。</li>
+        </ul>
+      </div>
+      <p class="tech-line"><strong>技术栈</strong>Python · FastAPI · SQLite · NumPy · DeepSeek-V4-Flash · BGE-M3 · RAGAS · Pandas · SciPy · scikit-learn · XGBoost · Vue 3 · TypeScript · Cytoscape · Docker</p>
+    </section>
+  </main>
+
+  <footer class="case-footer"><span>© 2026 陈琳锋</span><span>食品科学 × AI 应用</span><a href="index.html#projects">返回精选项目 ↑</a></footer>
+</body>
+</html>

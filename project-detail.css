@@ -1,0 +1,274 @@
+.case-page {
+  --case-accent: var(--orange);
+  background: #fff;
+}
+
+.case-page.research-case { --case-accent: var(--blue); }
+
+.case-header .back-link {
+  color: #444;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.case-header .back-link:hover { color: var(--case-accent); }
+
+.case-main { padding-top: 0; }
+
+.case-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(310px, .8fr);
+  gap: 72px;
+  width: min(100%, 1240px);
+  min-height: 580px;
+  margin: 0 auto;
+  padding: 92px 5.8vw 76px;
+  align-items: center;
+}
+
+.case-index {
+  color: var(--case-accent);
+  font: 800 12px/1.2 ui-monospace, "Cascadia Mono", monospace;
+}
+
+.case-hero h1 {
+  max-width: 820px;
+  margin: 18px 0 22px;
+  font: 800 58px/1.08 Georgia, "Noto Serif SC", "Songti SC", serif;
+  letter-spacing: 0;
+}
+
+.case-hero h1 em { color: var(--case-accent); font-style: normal; }
+
+.case-subtitle {
+  max-width: 720px;
+  margin: 0;
+  color: #606060;
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+.case-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 28px;
+}
+
+.case-meta span {
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  color: #666;
+  font-size: 12px;
+}
+
+.case-thesis {
+  position: relative;
+  padding: 34px 34px 38px;
+  border-top: 5px solid var(--case-accent);
+  background: #111;
+  color: #fff;
+}
+
+.case-thesis::before {
+  display: block;
+  margin-bottom: 25px;
+  color: var(--case-accent);
+  font: 800 11px ui-monospace, monospace;
+  content: "PROJECT THESIS";
+}
+
+.case-thesis p {
+  margin: 0;
+  font: 700 25px/1.55 Georgia, "Noto Serif SC", serif;
+}
+
+.case-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: min(100%, 1240px);
+  margin: 0 auto;
+  padding: 0 5.8vw;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.case-metrics div {
+  min-width: 0;
+  padding: 28px 24px;
+  border-right: 1px solid var(--line);
+}
+
+.case-metrics div:first-child { padding-left: 0; }
+.case-metrics div:last-child { border-right: 0; }
+
+.case-metrics b {
+  display: block;
+  color: var(--case-accent);
+  font: 800 30px/1.1 Georgia, "Times New Roman", serif;
+  overflow-wrap: anywhere;
+}
+
+.case-metrics span {
+  display: block;
+  margin-top: 7px;
+  color: #777;
+  font-size: 12px;
+}
+
+.case-section {
+  width: min(100%, 1240px);
+  margin: 0 auto;
+  padding: 100px 5.8vw 0;
+}
+
+.case-section-head {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 24px;
+  padding-bottom: 18px;
+  border-bottom: 2px solid #111;
+}
+
+.case-section-head span {
+  color: var(--case-accent);
+  font: 800 12px ui-monospace, monospace;
+}
+
+.case-section-head h2 {
+  margin: 0;
+  font: 800 42px/1.1 Georgia, "Noto Serif SC", serif;
+}
+
+.case-flow {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 34px;
+  background: #d7d7d7;
+  border: 1px solid #d7d7d7;
+}
+
+.case-flow div {
+  min-width: 0;
+  padding: 24px 20px;
+  background: #fff;
+}
+
+.case-flow small {
+  display: block;
+  color: var(--case-accent);
+  font: 800 11px ui-monospace, monospace;
+}
+
+.case-flow strong { display: block; margin-top: 8px; font-size: 15px; }
+.case-flow p { margin: 8px 0 0; color: #777; font-size: 12px; line-height: 1.6; }
+
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 60px;
+  row-gap: 46px;
+  margin-top: 36px;
+}
+
+.case-block {
+  padding-top: 15px;
+  border-top: 3px solid var(--case-accent);
+}
+
+.case-block .block-label {
+  color: #999;
+  font: 800 10px ui-monospace, monospace;
+}
+
+.case-block h3 { margin: 10px 0 10px; font-size: 22px; line-height: 1.35; }
+.case-block p { margin: 0; color: #666; font-size: 14px; line-height: 1.8; }
+.case-block strong { color: #222; }
+
+.result-band {
+  margin-top: 38px;
+  padding: 34px 36px;
+  background: #111;
+  color: #fff;
+}
+
+.result-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 24px;
+  padding: 18px 0;
+  border-bottom: 1px solid #3c3c3c;
+  align-items: baseline;
+}
+
+.result-row:last-child { border-bottom: 0; }
+.result-row span { color: #aaa; font-size: 13px; }
+.result-row b { color: var(--case-accent); font: 800 25px Georgia, serif; }
+.result-row em { color: #fff; font-style: normal; font-size: 13px; }
+
+.case-contribution {
+  display: grid;
+  grid-template-columns: .82fr 1.18fr;
+  gap: 70px;
+  margin-top: 38px;
+}
+
+.contribution-lead {
+  margin: 0;
+  color: #222;
+  font: 700 27px/1.5 Georgia, "Noto Serif SC", serif;
+}
+
+.contribution-list { margin: 0; padding: 0; list-style: none; }
+.contribution-list li { padding: 13px 0; border-bottom: 1px solid var(--line); color: #5f5f5f; font-size: 14px; line-height: 1.65; }
+.contribution-list li:first-child { padding-top: 0; }
+.contribution-list b { margin-right: 10px; color: var(--case-accent); font: 800 11px ui-monospace, monospace; }
+
+.tech-line {
+  margin-top: 40px;
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  color: #555;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.tech-line strong { margin-right: 14px; color: #111; }
+
+.case-footer { margin-top: 110px; }
+
+@media (max-width: 900px) {
+  .case-hero { grid-template-columns: 1fr; min-height: 0; gap: 38px; }
+  .case-hero h1 { font-size: 48px; }
+  .case-thesis { max-width: 620px; }
+  .case-flow { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+  .case-header { height: 64px; }
+  .case-hero { padding: 58px 20px 48px; }
+  .case-hero h1 { font-size: 39px; line-height: 1.12; }
+  .case-subtitle { font-size: 15px; }
+  .case-thesis { padding: 26px 24px 30px; }
+  .case-thesis p { font-size: 21px; }
+  .case-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0 20px; }
+  .case-metrics div { padding: 22px 12px; border-bottom: 1px solid var(--line); }
+  .case-metrics div:nth-child(2) { border-right: 0; }
+  .case-metrics div:nth-child(3), .case-metrics div:nth-child(4) { border-bottom: 0; }
+  .case-metrics div:first-child { padding-left: 12px; }
+  .case-metrics b { font-size: 24px; }
+  .case-section { padding: 72px 20px 0; }
+  .case-section-head { grid-template-columns: 45px 1fr; gap: 12px; }
+  .case-section-head h2 { font-size: 32px; }
+  .case-flow { grid-template-columns: 1fr; }
+  .case-grid, .case-contribution { grid-template-columns: 1fr; gap: 30px; }
+  .result-band { padding: 24px 20px; }
+  .result-row { grid-template-columns: 1fr; gap: 5px; }
+  .result-row b { font-size: 22px; }
+  .contribution-lead { font-size: 23px; }
+  .case-footer { margin-top: 76px; }
+}
