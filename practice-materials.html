@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="陈琳锋：把 20 套实践材料交付做成一套可复制的流程——本专业实践材料自动化 Skill。">
+  <title>本专业实践材料自动化 Skill｜陈琳锋</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css?v=20260912">
+  <link rel="stylesheet" href="project-detail.css?v=20260912">
+  <style>
+    /* 本页新增：图件栅格。不需要可以整段删掉。 */
+    .case-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .case-figure { margin: 0; border: 1px dashed var(--line); border-radius: 12px; padding: 10px; background: var(--soft); }
+    .case-figure img { width: 100%; display: block; border-radius: 8px; }
+    .case-figure .ph {
+      aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 10px; border-radius: 8px;
+      background: #fff; color: var(--muted); font-size: 12px; line-height: 1.5;
+    }
+    .case-figure figcaption { margin-top: 8px; font-size: 12px; color: var(--muted); line-height: 1.55; }
+    /* case-flow 基础是 5 列，这里给 3 段式流程用 */
+    .case-flow.flow-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    @media (max-width: 760px) { .case-gallery { grid-template-columns: 1fr; } .case-flow.flow-3 { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body class="case-page materials-case">
+  <header class="site-header case-header">
+    <a class="brand" href="index.html">Chen<span>.</span></a>
+    <a class="back-link" href="index.html#projects">← 返回作品集</a>
+    <a class="header-action" href="https://github.com/syzlm2001/practice-materials-automation-skill" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+  </header>
+
+  <main class="case-main">
+    <section class="case-hero">
+      <div>
+        <span class="case-index">03 / WORKFLOW AUTOMATION</span>
+        <h1>把 20 套材料交付<br><em>做成一套可复制的流程</em></h1>
+        <p class="case-subtitle">从自己的真实痛点出发，把内容组织、模板套用、格式校验和交付验收抽象成可复用的 Skill；在真实交付中暴露问题后调整方案，最终向 20 名食品专业学生交付 20 套完整材料，单套制作时间由 8 小时缩短至 30 分钟。</p>
+        <div class="case-meta"><span>个人项目</span><span>需求拆解 · 规则设计 · 交付验收</span><span>2026</span><span>Skill Design / Workflow Automation</span></div>
+      </div>
+      <aside class="case-thesis"><p>先让自己省事，再让它对别人也好用——中间隔着一次失败的第一版。</p></aside>
+    </section>
+
+    <section class="case-metrics" aria-label="项目关键指标">
+      <div><b>8 小时 → 30 分钟</b><span>单套材料制作时间</span></div>
+      <div><b>2 人 → 20 人</b><span>用户规模 · 靠互相推荐扩展</span></div>
+      <div><b>20 套</b><span>完整材料交付</span></div>
+      <div><b>5 步</b><span>可介入工作流</span></div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-head"><span>01</span><h2>起点是我自己</h2></div>
+      <div class="case-grid">
+        <article class="case-block"><span class="block-label">FIRST USER</span><h3>先解决自己的问题</h3><p>本专业实践材料有固定的内容结构、格式规范和评审要求，单套制作要反复排版约 <strong>8 小时</strong>，而且格式不合格就要整段返工。我没有先去找用户，而是先自己做一版——因为那个最痛的人就是我自己。</p></article>
+        <article class="case-block"><span class="block-label">FROM 1 TO MANY</span><h3>自用跑通，再交付给别人</h3><p>自己用顺手之后，我在同学之间做了小范围交流，确认「格式反复返工」不是个人问题而是普遍问题，才把范围从自用扩展到对外交付。</p></article>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-head"><span>02</span><h2>第一版我判断错了</h2></div>
+      <p class="contribution-lead">这是这个项目里我最想讲的部分：我的初始方案被真实使用推翻了，而推翻它的不是我，是 Word。</p>
+      <div class="case-flow flow-3">
+        <div><small>STEP 01</small><strong>初始假设</strong><p>目标很朴素——让自己省事。所以第一版直接奔着「一键交付」做，把重心放在把材料一次性生成出来。</p></div>
+        <div><small>STEP 02</small><strong>实测暴露</strong><p>真正交付给同学用的时候，瓶颈不在生成速度，而在 Word 版式：格式错乱、样式丢失，用户拿到手还得重新排一遍。</p></div>
+        <div><small>STEP 03</small><strong>修正方案</strong><p>把重心从「自动生成」整体挪到「格式可控」：补入 Word 模板精准套用与格式一致性校验，流程改成五步可介入。</p></div>
+      </div>
+      <div class="result-band" aria-label="方案调整带来的变化">
+        <div class="result-row"><span>产品重心</span><b>自动生成 → 格式可控</b><em>从「生成得快」改到「交付即合格」</em></div>
+        <div class="result-row"><span>交互形态</span><b>一键交付 → 五步可介入</b><em>每一步用户都可以停下来改</em></div>
+        <div class="result-row"><span>结果</span><b>8 小时 → 30 分钟</b><em>效率提升 90%+，单人可完成 20 套</em></div>
+      </div>
+      <p class="tech-line"><strong>这次调整让我确认了一件事</strong>用户真正在意的不是「自动化程度有多高」，而是「改回来要花多少力气」。</p>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-head"><span>03</span><h2>五步可介入的工作流</h2></div>
+      <div class="case-flow">
+        <div><small>STEP 01</small><strong>选题生成</strong><p>按实践要求生成选题方向与内容骨架，供用户确认或替换。</p></div>
+        <div><small>STEP 02</small><strong>内容撰写</strong><p>按模块填充内容，保留人工修改入口，不锁死文本。</p></div>
+        <div><small>STEP 03</small><strong>模板套用</strong><p>套用 Word 模板并保留原有版式，避免生成后样式丢失。</p></div>
+        <div><small>STEP 04</small><strong>格式校验</strong><p>对字体、段落、编号、页边距等做一致性校验，不通过则回退修改。</p></div>
+        <div><small>STEP 05</small><strong>批量交付</strong><p>一次性产出多套材料，按人分别归档交付。</p></div>
+      </div>
+      <div class="case-grid">
+        <article class="case-block"><span class="block-label">RULE DESIGN</span><h3>把格式要求变成可执行规则</h3><p>格式问题的根源是"规范只写给人看，没写成机器能判断的条件"。我把格式要求逐条转成校验规则，让"合不合格"从主观判断变成可程序化检查。</p></article>
+        <article class="case-block"><span class="block-label">TECH CHOICE</span><h3>为什么是 Skill 而不是一个脚本</h3><p>做成 Skill 而不是一次性脚本，是为了让流程可复用、可被下次直接调用，也让"每一步谁负责"写在流程里，而不是留在我的脑子里。</p></article>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-head"><span>04</span><h2>用户是自己长出来的</h2></div>
+      <div class="case-grid">
+        <article class="case-block"><span class="block-label">START SMALL</span><h3>从 2 名同学开始</h3><p>最初只给 <strong>2 名同学</strong>试用，验证"格式可控"这个判断是不是真的解决了问题，而不是急着铺开。</p></article>
+        <article class="case-block"><span class="block-label">BY REFERRAL</span><h3>靠互相推荐扩展到 20 人</h3><p>之后用户是在同学之间互相推荐扩展起来的，最终覆盖 <strong>20 名食品专业学生</strong>，交付 20 套完整材料。这比我主动去推广更能说明东西是可用的。</p></article>
+      </div>
+      <div class="case-gallery">
+        <figure class="case-figure">
+          <!-- 替换下面这行：<div class="ph"> 换成 <img src="assets/materials-output.jpg" alt="批量生成的材料成品"> -->
+          <div class="ph">放「批量生成后的成品截图」<br>（打开一份 Word，截含目录与正文的一屏）</div>
+          <figcaption>成品效果：套用模板后的 Word 材料，格式与版式保持完整。</figcaption>
+        </figure>
+        <figure class="case-figure">
+          <!-- 替换：<img src="assets/materials-workflow.jpg" alt="五步工作流结构"> -->
+          <div class="ph">放「工作流 / 规则结构截图」<br>（Skill 目录或五步流程定义）</div>
+          <figcaption>工作流结构：选题生成 → 内容撰写 → 模板套用 → 格式校验 → 批量交付。</figcaption>
+        </figure>
+        <figure class="case-figure">
+          <!-- 替换：<img src="assets/materials-check.jpg" alt="格式校验结果"> -->
+          <div class="ph">放「格式校验运行结果截图」<br>（终端或校验报告输出）</div>
+          <figcaption>格式校验：按规则逐项检查，不合格项回退修改后再交付。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-head"><span>05</span><h2>我的职责</h2></div>
+      <div class="case-contribution">
+        <p class="contribution-lead">从需求判断到规则设计再到交付验收，把这个流程完整跑通，并对交付结果负责。</p>
+        <ul class="contribution-list">
+          <li><b>01</b>把"做材料慢"这个模糊感受拆成具体问题：时间花在哪一步、返工是由什么触发的。</li>
+          <li><b>02</b>确定第一版方案（一键交付），并在真实使用中识别出它的问题不在生成速度，在格式。</li>
+          <li><b>03</b>把格式要求转成可执行校验规则，设计五步可介入的工作流。</li>
+          <li><b>04</b>实现 Word 模板精准套用、格式一致性校验与批量交付。</li>
+          <li><b>05</b>完成 20 套材料的交付与验收，并跟进交付后的使用反馈。</li>
+        </ul>
+      </div>
+      <p class="tech-line"><strong>技术栈</strong>Python · PowerShell · Word 模板版式保留 · 格式规则校验 · Skill 工作流编排</p>
+    </section>
+  </main>
+
+  <footer class="case-footer"><span>© 2026 陈琳锋</span><span>需求拆解 × 规则设计 × 交付验收</span><a href="index.html#projects">返回精选项目 ↑</a></footer>
+</body>
+</html>

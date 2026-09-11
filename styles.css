@@ -264,6 +264,16 @@ footer {
   font: 400 11px/1.3 "Microsoft YaHei", sans-serif;
 }
 .card-type { color: #999999; font: 11px ui-monospace, monospace; }
+/* 代码不公开状态标签：替代不可点击的仓库链接 */
+.repo-note {
+  padding: 4px 11px;
+  border: 1px dashed var(--line, #cfcfcf);
+  border-radius: 20px;
+  color: var(--muted, #8a8a8a);
+  font: 11px ui-monospace, monospace;
+  white-space: nowrap;
+}
+.repo-note-strong { padding: 8px 15px; font-size: 12px; }
 
 .competition-section {
   width: 100%;
